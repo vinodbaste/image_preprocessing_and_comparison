@@ -182,7 +182,7 @@ image1 = cv2.imread('image1.jpg', cv2.IMREAD_GRAYSCALE)
 image2 = cv2.imread('image2.jpg', cv2.IMREAD_GRAYSCALE)
 
 psnr_value = calculate_psnr(image1, image2)
-ssim_comparison(image1, image2)
+ssim_comparison('image1.jpg','image2.jpg')
 ```
 ### Running Multiple Comparisons
 
