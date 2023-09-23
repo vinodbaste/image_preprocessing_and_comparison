@@ -3,7 +3,7 @@
 This Python library provides a comprehensive set of functions for image preprocessing and comparison. It includes various filters for image enhancement, as well as metrics for comparing images.
 
 <p align="center">
-  <img src="https://github.com/vinodbaste/image_preprocessing_and_comparison/blob/main/Gabor%20Filter.jpg" width="240" />
+  <img src="before_comparison.png" width="240" />
   <img src="after_comparison.png" width="240" />
 </p>
 
