@@ -2,8 +2,8 @@ from setuptools import find_packages, setup
 
 classifiers = [
   'Development Status :: 5 - Production/Stable',
-  'Intended Audience :: Data Science',
-  'Operating System :: Microsoft :: Windows',
+  'Intended Audience :: Education',
+  'Operating System :: OS Independent',
   'License :: OSI Approved :: MIT License',
   'Programming Language :: Python :: 3'
 ]
@@ -21,5 +21,6 @@ setup(
     url='https://github.com/vinodbaste/image_preprocessing_and_comparison/blob/main/Readme.md',
     author_email='bastevinod@gmail.com',
     keywords=['image preprocessing', 'image comparison'],
-    license='MIT'
+    license='MIT',
+    python_requires='>=3.6'
 )
