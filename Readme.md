@@ -83,7 +83,7 @@ This Python library provides a comprehensive set of functions for image preproce
 
 To install the library, clone the repository and include it in your Python project:
 ```bash
-git clone https://github.com/your_username/image-processing-library.git
+pip install image-preprocessing-comparison==1.1.1
 ```
 
 ## Requirements
@@ -99,9 +99,10 @@ You can install these dependencies using `pip`:
 ## Examples
 ## Image Preprocessing
 To apply a filter, import the desired function and pass the input image as an argument. For example, to apply the Sobel filter:
+
 ```python
 import cv2
-from filters import apply_sobel_filter
+from image_preprocessing_comparison.filters import apply_sobel_filter
 
 input_image = cv2.imread('input_image.jpg', cv2.IMREAD_GRAYSCALE)
 sobel_result = apply_sobel_filter(input_image)
@@ -113,10 +114,12 @@ To apply all the filters to an image at once, you can use the following code sni
 
 ```python
 import cv2
-from filters import apply_sobel_filter, apply_scharr_filter, apply_prewitt_filter, apply_gaussian_filter, \
-    apply_laplacian_filter, apply_emboss_filter, apply_box_filter, apply_motion_blur_filter, apply_bilateral_filter, \
-    apply_gabor_filter, apply_dog_filter, apply_log_filter, apply_kirsch_operator, apply_craigs_edge_detection, \
-    apply_frei_chen_filter, apply_mean_filter, apply_median_filter, apply_min_filter, apply_max_filter
+from image_preprocessing_comparison.filters import apply_sobel_filter, apply_scharr_filter, apply_prewitt_filter,
+
+apply_gaussian_filter,
+apply_laplacian_filter, apply_emboss_filter, apply_box_filter, apply_motion_blur_filter, apply_bilateral_filter,
+apply_gabor_filter, apply_dog_filter, apply_log_filter, apply_kirsch_operator, apply_craigs_edge_detection,
+apply_frei_chen_filter, apply_mean_filter, apply_median_filter, apply_min_filter, apply_max_filter
 
 
 def test_all_filters(input_image):
@@ -174,15 +177,16 @@ for filter_name, result in filtered_images.items():
 
 ## Image Comparison
 To compare two images, import the desired function and pass the images as arguments. For example, to calculate PSNR and SSIM:
+
 ```python
 import cv2
-from compare_images import calculate_psnr, ssim_comparison
+from image_preprocessing_comparison.compare_images import calculate_psnr, ssim_comparison
 
 image1 = cv2.imread('image1.jpg', cv2.IMREAD_GRAYSCALE)
 image2 = cv2.imread('image2.jpg', cv2.IMREAD_GRAYSCALE)
 
 psnr_value = calculate_psnr(image1, image2)
-ssim_comparison('image1.jpg','image2.jpg')
+ssim_comparison('image1.jpg', 'image2.jpg')
 ```
 ### Running Multiple Comparisons
 
@@ -192,11 +196,13 @@ To perform multiple image comparisons at once, you can use the following code sn
 import cv2
 from skimage.metrics import structural_similarity as ssim
 
-from compare_images import calculate_psnr, calculate_rmse, calculate_ncc, calculate_correlation_coefficient, \
-    calculate_mae, calculate_structural_content, calculate_histogram_intersection, \
-    calculate_kl_divergence, calculate_f1_score, calculate_dice_coefficient, \
-    calculate_jaccard_index, calculate_mean_absolute_percentage_error, calculate_zero_mean_normalized_cross_correlation, \
-    calculate_multi_scale_ssim, ssim_comparison
+from image_preprocessing_comparison.compare_images import calculate_psnr, calculate_rmse, calculate_ncc,
+
+calculate_correlation_coefficient,
+calculate_mae, calculate_structural_content, calculate_histogram_intersection,
+calculate_kl_divergence, calculate_f1_score, calculate_dice_coefficient,
+calculate_jaccard_index, calculate_mean_absolute_percentage_error, calculate_zero_mean_normalized_cross_correlation,
+calculate_multi_scale_ssim, ssim_comparison
 
 # Load two example images for testing
 image1 = cv2.imread('image1.jpg', cv2.IMREAD_GRAYSCALE)
